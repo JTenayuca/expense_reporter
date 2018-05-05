@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/expenses/create">Create Expense</a></h3>
+      <h1>Expense List</h1>
+      <% if(expenses.length>0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Expense Date</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<expenses.length;i++) { %>
+            <tr>
+              <td><a href="/expenses/show/<%= expenses[i]._id%>"><%= expenses[i].Expense_Date%></a></td>
+              <td><%= expenses[i].Description%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No expenses found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/expenses">Expense List</a></h3>
+      <h1>Expense Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Date</td>
+            <td>:</td>
+            <td><%= expenses.Expense_Date %></td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>:</td>
+            <td><%= expenses.Vendor %></td>
+          </tr>
+          <tr>
+            <td>Purpose</td>
+            <td>:</td>
+            <td><%= expenses.Purpose %></td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>:</td>
+            <td><%= expenses.Description %></td>
+          </tr>
+          <tr>
+            <td>Amount</td>
+            <td>:</td>
+            <td>$<%= expenses.Amount %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/expenses/edit/<%= expenses._id%>">EDIT</a></h3>
+      <form action="/expenses/delete/<%= expenses._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

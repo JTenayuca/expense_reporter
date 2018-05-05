@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Expense</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/expenses">Expense List</a></h3>
+      <h1>Create New Expense</h1>
+      <form action="/expenses/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td><textarea name="Expense_Date"></textarea></td>
+            </tr>
+            <tr>
+              <td>Vendor</td>
+              <td><textarea name="Vendor"></textarea></td>
+            </tr>
+            <tr>
+              <td>Purpose</td>
+              <td><input type="text" name="Purpose" /></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="Description" /></td>
+            </tr>
+            <tr>
+              <td>Amount</td>
+              <td><input type="number" name="Amount" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

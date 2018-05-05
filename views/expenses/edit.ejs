@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Expense</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/expenses">Expense List</a></h3>
+      <h1>Edit Expense</h1>
+      <form action="/expenses/update/<%= expense._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td><input type="text" name="Expense_Date" value="<%= expense.Expense_Date %>" /></td>
+            </tr>
+            <tr>
+              <td>Vendor</td>
+              <td><input type="text" name="Vendor" value="<%= expense.Vendor %>" /></td>
+            </tr>
+            <tr>
+              <td>Purpose</td>
+              <td><input type="text" name="Purpose" value="<%= expense.Purpose %>" /></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="Description" value="<%= expense.Description %>" /></td>
+            </tr>
+            <tr>
+              <td>Amount</td>
+              <td><input type="number" name="Amount" value="<%= expense.Amount %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
